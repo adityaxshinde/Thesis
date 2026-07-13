@@ -260,12 +260,14 @@ T+1-derived quantity appears among the 13 features.
 Two deliberately untuned, defaults-first baselines from scikit-learn:
 
 - **`HistGradientBoostingClassifier`** — library defaults; re-trained with
-  `random_state=42` in the feature-analysis pass for reproducibility (test
-  PR-AUC moved from 0.456 unseeded to 0.459 seeded).
+  `random_state=42` in the feature-analysis pass for reproducibility. The
+  saved model (`data/models/hgb_baseline.joblib`) and every reported HGB
+  metric come from this seeded run.
 - **`RandomForestClassifier(n_estimators=300, random_state=42)`**.
 
 On the 2022 Q1+ test window, HGB reaches **PR-AUC 0.459 (≈1.6× lift)** and
-**precision@top-10% 0.538 (≈1.9× lift)** over the naive baseline.
+**precision@top-10% 0.545 (≈1.9× lift)** over the naive baseline
+(`outputs/model_metrics.csv`).
 
 `feature_analysis.py` adds three diagnostics:
 
@@ -280,3 +282,31 @@ On the 2022 Q1+ test window, HGB reaches **PR-AUC 0.459 (≈1.6× lift)** and
 - **Temporal stability**: permutation importance recomputed separately on
   the two halves of the test window (2022 Q1–2023 Q4 vs 2024 Q1 onward);
   the top-6 feature ranking is stable across the two periods.
+
+## Limitations
+
+- **Revenue / operating-margin coverage constrains the sample.** An
+  operating margin is computable on only **49.2%** of panel rows (quarterly
+  revenues and operating income are jointly tagged on 51.4%; verified
+  directly from the saved parquet), and the label additionally requires a
+  three-quarter margin chain and a ≥ 4-firm peer group (§5) — so **130,338
+  of 355,209** company-quarters (~37%) are labelable, even after the Q4 flow
+  derivation of §4. The narrow debt ratio is excluded from the feature set
+  for the same reason (**58.77%** coverage in the labeled set; §3).
+- **Survivorship / exit bias.** EDGAR reflects companies that are still
+  filing. A row is labeled only if the company files a comparable quarter
+  T+1, so firms that delist, are acquired, or go bankrupt exit the panel at
+  exactly the moment of greatest deterioration; the worst outcomes are
+  under-represented in both training and evaluation.
+- **SIC coarseness as a sector proxy.** Peer groups are raw SIC codes
+  recomputed each quarter (§3). SIC is a dated classification of uneven
+  granularity — some four-digit codes mix dissimilar businesses while others
+  split similar ones — peer groups with fewer than 4 labelable firms are
+  dropped (§5), and a misclassified company is ranked against the wrong
+  peers.
+- **Scope: operating companies only.** The ratios presuppose an operating
+  business with meaningful revenues and margins. Financial firms, funds,
+  shells, and pre-revenue companies have undefined ratios under the
+  `safe_ratio` rule (§3) and fall out of the complete-case sample; results
+  apply to operating companies with reportable revenue/margin data, not the
+  full EDGAR filer population.
