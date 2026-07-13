@@ -48,7 +48,6 @@ ST_TAGS = [
     "ShortTermBorrowings",
     "DebtCurrent",
     "CommercialPaper",
-    "LineOfCreditFacilityMaximumBorrowingCapacity",
 ]
 ALL_DEBT_TAGS = sorted(set(LT_TAGS) | set(ST_TAGS))
 
