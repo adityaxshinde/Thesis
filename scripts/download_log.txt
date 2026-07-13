@@ -1,0 +1,126 @@
+Planning to fetch 57 quarters: 2012q1 .. 2026q1
+Saving to: D:\Thesis\data\raw
+
+[1/57] 2012q1 ... OK (81.5 MB, sub.txt rows=7418)
+[2/57] 2012q2 ... OK (76.4 MB, sub.txt rows=9193)
+[3/57] 2012q3 ... OK (85.5 MB, sub.txt rows=8002)
+[4/57] 2012q4 ... OK (91.4 MB, sub.txt rows=8115)
+[5/57] 2013q1 ... OK (94.6 MB, sub.txt rows=6788)
+[6/57] 2013q2 ... OK (92.4 MB, sub.txt rows=8954)
+[7/57] 2013q3 ... OK (93.8 MB, sub.txt rows=8038)
+[8/57] 2013q4 ... OK (88.1 MB, sub.txt rows=7846)
+[9/57] 2014q1 ... OK (98.1 MB, sub.txt rows=7158)
+[10/57] 2014q2 ... OK (81.1 MB, sub.txt rows=8550)
+[11/57] 2014q3 ... OK (83.4 MB, sub.txt rows=7790)
+[12/57] 2014q4 ... OK (83.6 MB, sub.txt rows=7713)
+[13/57] 2015q1 ... OK (94.4 MB, sub.txt rows=6995)
+[14/57] 2015q2 ... OK (75.3 MB, sub.txt rows=8212)
+[15/57] 2015q3 ... OK (78.9 MB, sub.txt rows=7455)
+[16/57] 2015q4 ... OK (79.2 MB, sub.txt rows=7234)
+[17/57] 2016q1 ... OK (91.0 MB, sub.txt rows=6532)
+[18/57] 2016q2 ... OK (70.4 MB, sub.txt rows=7518)
+[19/57] 2016q3 ... OK (67.8 MB, sub.txt rows=6139)
+[20/57] 2016q4 ... OK (75.7 MB, sub.txt rows=6752)
+[21/57] 2017q1 ... OK (88.2 MB, sub.txt rows=6270)
+[22/57] 2017q2 ... OK (68.1 MB, sub.txt rows=7226)
+[23/57] 2017q3 ... OK (70.9 MB, sub.txt rows=6508)
+[24/57] 2017q4 ... OK (72.5 MB, sub.txt rows=6549)
+[25/57] 2018q1 ... OK (88.9 MB, sub.txt rows=5984)
+[26/57] 2018q2 ... OK (87.7 MB, sub.txt rows=7484)
+[27/57] 2018q3 ... OK (83.2 MB, sub.txt rows=6493)
+[28/57] 2018q4 ... OK (60.0 MB, sub.txt rows=6418)
+[29/57] 2019q1 ... OK (91.5 MB, sub.txt rows=5708)
+[30/57] 2019q2 ... OK (86.0 MB, sub.txt rows=7232)
+[31/57] 2019q3 ... OK (85.7 MB, sub.txt rows=6274)
+[32/57] 2019q4 ... OK (94.2 MB, sub.txt rows=6211)
+[33/57] 2020q1 ... OK (92.1 MB, sub.txt rows=5816)
+[34/57] 2020q2 ... OK (78.2 MB, sub.txt rows=6561)
+[35/57] 2020q3 ... OK (83.5 MB, sub.txt rows=6302)
+[36/57] 2020q4 ... OK (85.7 MB, sub.txt rows=6260)
+[37/57] 2021q1 ... OK (93.4 MB, sub.txt rows=6316)
+[38/57] 2021q2 ... OK (86.7 MB, sub.txt rows=7810)
+[39/57] 2021q3 ... OK (92.7 MB, sub.txt rows=7499)
+[40/57] 2021q4 ... OK (97.9 MB, sub.txt rows=7556)
+[41/57] 2022q1 ... OK (98.9 MB, sub.txt rows=7237)
+[42/57] 2022q2 ... OK (92.6 MB, sub.txt rows=8509)
+[43/57] 2022q3 ... OK (93.1 MB, sub.txt rows=7474)
+[44/57] 2022q4 ... OK (105.9 MB, sub.txt rows=7280)
+[45/57] 2023q1 ... OK (108.7 MB, sub.txt rows=6754)
+[46/57] 2023q2 ... OK (111.5 MB, sub.txt rows=8039)
+[47/57] 2023q3 ... OK (112.3 MB, sub.txt rows=7067)
+[48/57] 2023q4 ... OK (114.7 MB, sub.txt rows=6882)
+[49/57] 2024q1 ... OK (118.6 MB, sub.txt rows=6028)
+[50/57] 2024q2 ... OK (113.6 MB, sub.txt rows=7675)
+[51/57] 2024q3 ... OK (112.8 MB, sub.txt rows=6699)
+[52/57] 2024q4 ... OK (117.2 MB, sub.txt rows=6491)
+[53/57] 2025q1 ... OK (121.8 MB, sub.txt rows=6231)
+[54/57] 2025q2 ... OK (75.3 MB, sub.txt rows=7009)
+[55/57] 2025q3 ... OK (121.9 MB, sub.txt rows=6541)
+[56/57] 2025q4 ... OK (62.8 MB, sub.txt rows=6304)
+[57/57] 2026q1 ... OK (81.3 MB, sub.txt rows=6169)
+
+==========================================================================================
+SUMMARY  (2026-07-13T02:11:02)
+==========================================================================================
+Quarter   Success   Size (MB)   sub.txt rows   Flag                          
+------------------------------------------------------------------------------------------
+2012q1    True      81.5        7418                                         
+2012q2    True      76.4        9193                                         
+2012q3    True      85.5        8002                                         
+2012q4    True      91.4        8115                                         
+2013q1    True      94.6        6788                                         
+2013q2    True      92.4        8954                                         
+2013q3    True      93.8        8038                                         
+2013q4    True      88.1        7846                                         
+2014q1    True      98.1        7158                                         
+2014q2    True      81.1        8550                                         
+2014q3    True      83.4        7790                                         
+2014q4    True      83.6        7713                                         
+2015q1    True      94.4        6995                                         
+2015q2    True      75.3        8212                                         
+2015q3    True      78.9        7455                                         
+2015q4    True      79.2        7234                                         
+2016q1    True      91.0        6532                                         
+2016q2    True      70.4        7518                                         
+2016q3    True      67.8        6139                                         
+2016q4    True      75.7        6752                                         
+2017q1    True      88.2        6270                                         
+2017q2    True      68.1        7226                                         
+2017q3    True      70.9        6508                                         
+2017q4    True      72.5        6549                                         
+2018q1    True      88.9        5984                                         
+2018q2    True      87.7        7484                                         
+2018q3    True      83.2        6493                                         
+2018q4    True      60.0        6418                                         
+2019q1    True      91.5        5708                                         
+2019q2    True      86.0        7232                                         
+2019q3    True      85.7        6274                                         
+2019q4    True      94.2        6211                                         
+2020q1    True      92.1        5816                                         
+2020q2    True      78.2        6561                                         
+2020q3    True      83.5        6302                                         
+2020q4    True      85.7        6260                                         
+2021q1    True      93.4        6316                                         
+2021q2    True      86.7        7810                                         
+2021q3    True      92.7        7499                                         
+2021q4    True      97.9        7556                                         
+2022q1    True      98.9        7237                                         
+2022q2    True      92.6        8509                                         
+2022q3    True      93.1        7474                                         
+2022q4    True      105.9       7280                                         
+2023q1    True      108.7       6754                                         
+2023q2    True      111.5       8039                                         
+2023q3    True      112.3       7067                                         
+2023q4    True      114.7       6882                                         
+2024q1    True      118.6       6028                                         
+2024q2    True      113.6       7675                                         
+2024q3    True      112.8       6699                                         
+2024q4    True      117.2       6491                                         
+2025q1    True      121.8       6231                                         
+2025q2    True      75.3        7009                                         
+2025q3    True      121.9       6541                                         
+2025q4    True      62.8        6304                                         
+2026q1    True      81.3        6169                                         
+------------------------------------------------------------------------------------------
+Total: 57  |  Succeeded: 57  |  Failed: 0
+No quarters flagged for abnormal sub.txt row counts.
