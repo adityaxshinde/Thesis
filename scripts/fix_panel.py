@@ -7,9 +7,10 @@ Post-processing pass on data/processed/panel.parquet.
    expanded set of XBRL tag variants (see LT_TAGS / ST_TAGS below), to
    raise total_debt coverage beyond the original LongTermDebt /
    ShortTermBorrowings-DebtCurrent-only lookup in build_panel.py.
-3. Computes six ratios per company-quarter:
-     operating_margin, current_ratio, debt_to_assets, revenue_growth,
-     roe, cash_to_assets
+3. Computes seven ratios per company-quarter:
+     operating_margin, current_ratio, liabilities_to_assets (primary
+     leverage feature), debt_to_assets_narrow (supplementary, from the
+     reconstructed total_debt), revenue_growth, roe, cash_to_assets
    Edge-case rules (applied uniformly via safe_ratio()):
      - denominator <= 0 or missing -> ratio is NaN (never divide)
      - result outside the bounds table -> winsorized (clipped) to bounds
@@ -56,7 +57,8 @@ NUM_CHUNKSIZE = 500_000
 RATIO_BOUNDS = {
     "operating_margin": (-5, 5),
     "current_ratio": (0, 50),
-    "debt_to_assets": (0, 10),
+    "liabilities_to_assets": (0, 10),
+    "debt_to_assets_narrow": (0, 10),
     "revenue_growth": (-1, 10),
     "roe": (-10, 10),
     "cash_to_assets": (0, 1),
@@ -184,7 +186,8 @@ def main():
 
     panel["operating_margin"] = safe_ratio(panel["operating_income_loss"], panel["revenues"])
     panel["current_ratio"] = safe_ratio(panel["assets_current"], panel["liabilities_current"])
-    panel["debt_to_assets"] = safe_ratio(panel["total_debt"], panel["assets"])
+    panel["liabilities_to_assets"] = safe_ratio(panel["liabilities"], panel["assets"])
+    panel["debt_to_assets_narrow"] = safe_ratio(panel["total_debt"], panel["assets"])
     panel["roe"] = safe_ratio(panel["net_income_loss"], panel["stockholders_equity"])
     panel["cash_to_assets"] = safe_ratio(panel["cash"], panel["assets"])
 
