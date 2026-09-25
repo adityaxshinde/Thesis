@@ -47,12 +47,8 @@ One limitation should be kept in mind. The survey weights are quite uneven, so t
 
 ## Running it
 
-The notebook runs in Google Colab. Open `WBES_AI_Sourcing_Pipeline.ipynb`, click Runtime → Run all, and upload the eight WBES files when prompted. Either the zip downloads or `.dta` files will work, and exact file names don't matter. The machine-learning part takes a few minutes.
-
-Tables and figures are saved in `/content/wbes_ai_results/`. If everything ran correctly, you should see N = 1,171, an AI-intensity Wald statistic of 18.812 and a gradient boosting balanced accuracy of 0.4233.
-
-The main libraries are pandas, NumPy, SciPy, patsy, scikit-learn and matplotlib.
+Open the notebook in Google Colab, run all cells and upload the eight WBES files when asked. The results should show N = 1,171 and an AI-intensity Wald statistic of 18.812.
 
 ## Author
 
-Aditya Shinde, Gisma University of Applied Sciences
+Aditya, Gisma University of Applied Sciences, Berlin
